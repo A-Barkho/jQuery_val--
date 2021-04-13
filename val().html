@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>val() Wertauslesen</title>
+        <script src="jquery-3.6.0.min.js"></script>
+        <style>
+            body{
+                background: url(https://cdn.pixabay.com/photo/2020/09/04/18/23/street-5544630_1280.jpg) no-repeat center fixed;
+                background-size: cover;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+            }
+            #container{
+                background-color: rgba(255, 255, 255, 0.8) ;/*Mit rgba kann man die helligkeit vom Background bestimmen*/
+                width: 300px;
+                height: 200px;
+                margin: 50vh auto;
+                border-radius: 10px;
+               /* opacity: 0.8; Mit opacity kann man die helligkeit vom ganzen Div-Container bestimmen*/
+            }
+            .inhalt{
+                margin: 10px 15px;
+            }
+            label{
+                margin-bottom: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <label class="inhalt" for="">Dein Name</label><br>
+            <input class="inhalt" type="text" id="nameBox">
+            <input class="inhalt" type="submit" id="submit">
+            <h1 class="inhalt" id="welcome">Welcome....</h1>
+        </div>
+        <script>
+            $("#submit").click (function(){
+                $("#welcome").text("Welcome " + $("#nameBox").val());
+            })
+        </script>
+    </body>
+</html>
